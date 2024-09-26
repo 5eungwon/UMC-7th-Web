@@ -1,0 +1,69 @@
+html, body {
+    width:100%;
+    height: 100%; /* html과 body 모두 100% 높이로 설정 */
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+
+.roofcontainer{
+    display: grid;
+    width:100%;
+    height:25%;
+    background-color: whitesmoke;
+    text-align: center;
+    place-items: center;
+
+}
+
+.inputcontainer{
+    width:100%;
+    height:15%;
+    background-color: whitesmoke;
+    text-align: center;
+    border-top: 1px solid black;
+
+}
+
+.inputbox{
+    width:60%;
+    height: 40%;
+    font-size: 130%;
+    font-style: oblique;
+}
+
+.Listcontainer{
+    width:100%;
+    height:59%;
+    background-color: whitesmoke;
+}
+
+.Listcontainer2{
+    height:100%;
+    width: 30%;
+    margin-left: 20%;
+    float : left;
+    font-weight: 1000;
+    font-style: oblique;
+    border-radius: 2%;
+    background-color: white;
+    border-color: grey;
+    border-width: 1px;
+    border-style: solid;
+    overflow: auto;
+}
+.Listcontainer3{
+    height:100%;
+    width: 30%;
+    background-color: white;
+    float : left;
+    font-weight: 1000;
+    font-style: oblique;
+    border-radius: 2%;
+    border-color: grey;
+    border-width: 1px;
+    border-style: solid;
+    overflow: auto;
+}
