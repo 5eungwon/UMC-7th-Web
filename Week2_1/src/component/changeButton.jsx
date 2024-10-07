@@ -7,14 +7,18 @@ function ChangeButton({value,todoList,addlist}){
     const deleteList = (v)=>{
         const newarr = todoList.filter((item)=>{return  item !== v})
         addlist(newarr)
+        // for(let j =0;j<todoList.length;j++){
+        //     if(v == todoList[j]){
+        //         addlist(todoList.splice(j,1,listValue));
+        //         break;
+        //     }
+        // }
+
     }
 
     const changetext =(e)=>{
         changeValue(e.target.value)
-
     }
-
-
 
    if(state == 0){
     return <>

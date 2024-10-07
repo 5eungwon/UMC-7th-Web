@@ -46,7 +46,7 @@ function App() {
      {todoList.map((v,i)=>{
        
        return <div key={i} style={{textAlign:"left"}}>
-         <ChangeButton value ={v} todoList={todoList} addlist = {addlist}/> 
+         <ChangeButton  value ={v} todoList={todoList} addlist = {addlist}/> 
          
        </div>
      }
