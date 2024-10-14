@@ -1,30 +1,23 @@
 import { useState,useEffect } from "react";
 import axios from "axios";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import CustomFetch_MovieList from "./CustomFetch_MovieList";
 
-function Homepage({url,code}){
-    const [movie,setmovie] = useState([])
+function Homepage({url}){
+    
+    const {movie} = CustomFetch_MovieList(url)
 
-    useEffect(()=>{
-        const getmovies = async () =>{
-            const movies = await axios.get(url,
-                {headers : {
-                    Authorization : code
-                }}
-            )
-             
-            console.log(movies?.data?.results)
-            setmovie(movies?.data?.results)
-        }
-        getmovies()
-    },[])
+    
     return <HomepageContent>
     {movie.map((v,i)=>{
-        return <div>
+        return <div key={i}>
              <div style={{height:"85%" , display:"flex", justifyContent:"center",alignItems:"center"}}>
+             <Link to={`/movies/details/${v.id}`}>
              <img src={`https://image.tmdb.org/t/p/w200${v?.poster_path}`} style={{width:"95%",height:"95%" ,borderRadius:"4%"}}></img>
+             </Link>
              </div>
-             <div style={{height:"15%" ,color:"white",fontSize:"small",fontWeight:"bold"}}>{v?.title}<br/>{v?.release_date}</div>
+             <div style={{height:"15%" ,color:"white",fontSize:"small"}}>{v?.title}<br/>{v?.release_date}</div>
         </div>
     })}
     </HomepageContent>

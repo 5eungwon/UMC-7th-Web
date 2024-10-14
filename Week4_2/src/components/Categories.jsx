@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+
 
 function Categories(){
     const img1 = "https://cloudfront-ap-northeast-1.images.arcpublishing.com/chosunbiz/LKZZE3IOE32G6SGRWSUFMIXZXQ.jpg"
@@ -9,33 +9,33 @@ function Categories(){
     return <CatePage>
         <Catebox>
             <Imgbox>
-                <Link to="/movies/now-playing">
+                <a href="/movies/now-playing">
                 <img src={img1} alt="" style={{width:"100%",height:"100%", borderRadius:"4%"}}/>
-                </Link>
+                </a>
                 <Textbox>현재 상영중인</Textbox>
             </Imgbox>
         </Catebox>
         <Catebox>
             <Imgbox>
-            <Link to="/movies/popular">
+            <a href="/movies/popular">
                 <img src={img2} alt="" style={{width:"100%",height:"100%", borderRadius:"4%"}}/>
-                </Link>
+                </a>
                 <Textbox>인기있는</Textbox>
             </Imgbox>
         </Catebox>
         <Catebox>
             <Imgbox>
-                <Link to="/movies/top-rated">
+                <a href="/movies/top-rated">
                 <img src={img3} alt="" style={{width:"100%",height:"100%", borderRadius:"4%"}}/>
-                </Link>
+                </a>
                 <Textbox>높은 평가를 받은</Textbox>
             </Imgbox>
         </Catebox>
         <Catebox>
             <Imgbox>
-                <Link to="/movies/up-coming">
+                <a href="/movies/up-coming">
                 <img src={img4} alt="" style={{width:"100%",height:"100%", borderRadius:"4%"}}/>
-                </Link>
+                </a>
                 <Textbox>개봉 예정</Textbox>
             </Imgbox>
         </Catebox>

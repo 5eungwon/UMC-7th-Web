@@ -10,27 +10,27 @@ function Root (){
     return <>
     <Navbar>
         <div style={{width:"10%",height:"100%",backgroundColor: "black",float:"left",alignItems:"center",justifyContent:"center",display:"flex"}}>
-            <Link to="/">
+            <a href="/">
                 <Homepagebtn>YONGCHA</Homepagebtn>
-            </Link>
+            </a>
         </div>
         <div style={{width:"87%",height:"100%",backgroundColor: "black" ,float:"left",display:"flex",alignItems:"center",justifyContent:"right"}}>
-            <Link to="/login"><Loginbtn>로그인</Loginbtn></Link>
+            <a href="/login"><Loginbtn>로그인</Loginbtn></a>
             <div style={{width:"3%"}}></div>
-            <Link to="/signup"><Signupbtn>회원가입</Signupbtn></Link>
+            <a href="/signup"><Signupbtn>회원가입</Signupbtn></a>
 
         </div>
     </Navbar>
     <Sidebar>
         <div style={{width:"100%" ,height:"10%",color:"white",display:"flex",alignItems:"center",justifyContent:"center"}}>
-            <Link to="/search">
+            <a href="/search">
             <Searchbtn><FaSearch />찾기</Searchbtn>
-            </Link>
+            </a>
         </div>
         <div style={{width:"100%" ,height:"10%",color:"white",display:"flex",alignItems:"center",justifyContent:"center"}}>
-        <Link to="/movies">
+        <a href="/movies">
         <Searchbtn><FaFilm />영화</Searchbtn>
-        </Link>
+            </a>
         </div>
     </Sidebar>
     <Mainbar>
