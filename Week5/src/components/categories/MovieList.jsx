@@ -4,7 +4,6 @@ import styled from "styled-components";
 import CustomFetch_MovieList from "../CustomFetch_MovieList.js";
 import { Link } from "react-router-dom";
 function MovieList({url}){
-  console.log(url)
     const {movie,loading,err} = CustomFetch_MovieList(url);
 
     return <HomepageContent>
