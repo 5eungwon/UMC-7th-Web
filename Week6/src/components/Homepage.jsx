@@ -4,10 +4,19 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import CustomFetch_MovieList from "./CustomFetch_MovieList";
 import { MyContext } from "../App";
+import { useQuery } from "@tanstack/react-query";
+
+
+
+
 function Homepage({url}){
     const {refreshtoken,accesstoken,setrefresh,setaccess} = useContext(MyContext)
-    const {movie} = CustomFetch_MovieList(url);
-    
+    const {data:movie,error,isLoading} = useQuery({queryKey:['homepage'] , 
+        queryFn:()=>getmovies(url)
+    })
+    console.log(movie)
+    if (isLoading) return <div>Loading...</div>;
+    if (error) return <div>Error: {error.message}</div>;
     return <HomepageContent>
     {movie.map((v,i)=>{
         return <div key={i}>
@@ -20,6 +29,15 @@ function Homepage({url}){
         </div>
     })}
     </HomepageContent>
+}
+
+const getmovies =async (url)=>{
+    const response = await axios.get(`${url}`,{
+        headers:{
+            Authorization : `Bearer ${import.meta.env.VITE_TMDB_TOKEN}`
+        }
+    })
+    return response.data.results
 }
 
 export default Homepage

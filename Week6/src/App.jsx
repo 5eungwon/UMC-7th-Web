@@ -23,8 +23,8 @@ export const MyContext = createContext();
 
 
 
-const nowplayingURL = 'https://api.themoviedb.org/3/movie/now_playing?language=ko-KR&page=1'
-const popularURL = "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc";
+const nowplayingURL = 'https://api.themoviedb.org/3/movie/now_playing?language=ko-KR'
+const popularURL = "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=ko-KR&page=1&sort_by=popularity.desc";
 const topratedURL = 'https://api.themoviedb.org/3/movie/top_rated?language=ko-KR&page=1'
 const upcomingURL = 'https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1'
 const kk = 'https://api.themoviedb.org/3/genre/movie/list?language=ko';
